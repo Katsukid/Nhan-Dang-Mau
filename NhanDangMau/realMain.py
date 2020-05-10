@@ -10,7 +10,7 @@ from detector import detector
 from cropper.cropper import crop_card
 from detector.detector import detect_info
 import cv2 as cv
-from symspellpy_vi import fixAddress
+from vi_symspellpy import fixAddress
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
