@@ -1,0 +1,32 @@
+swagger: "2.0"
+info:
+  description: This is the swagger file that goes with our server code
+  version: "1.0.0"
+  title: Swagger ReST Article
+consumes:
+  - application/json
+produces:
+  - application/json
+
+basePath: /api
+
+# Paths supported by the server application
+paths:
+  /app:
+    post:
+      operationId: receivePhotos.app
+      tags:
+        - app
+      summary: Receive raw pid_data and get
+      description: Receive bytes image and save
+      parameters:
+        - name: data
+          in: body
+          description: Raw pid_data to extract
+          required: True
+          schema:
+            type: string
+            format: byte
+      responses:
+        200:
+          description: Successfully created person in list

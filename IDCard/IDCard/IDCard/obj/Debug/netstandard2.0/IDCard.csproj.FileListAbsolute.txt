@@ -1,0 +1,16 @@
+D:\Visual Studio\Source\IDCard\IDCard\IDCard\bin\Debug\netstandard2.0\IDCard.deps.json
+D:\Visual Studio\Source\IDCard\IDCard\IDCard\bin\Debug\netstandard2.0\IDCard.dll
+D:\Visual Studio\Source\IDCard\IDCard\IDCard\bin\Debug\netstandard2.0\IDCard.pdb
+D:\Visual Studio\Source\IDCard\IDCard\IDCard\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Visual Studio\Source\IDCard\IDCard\IDCard\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Visual Studio\Source\IDCard\IDCard\IDCard\obj\Debug\netstandard2.0\IDCard.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Source\IDCard\IDCard\IDCard\obj\Debug\netstandard2.0\IDCard.AssemblyInfoInputs.cache
+D:\Visual Studio\Source\IDCard\IDCard\IDCard\obj\Debug\netstandard2.0\IDCard.AssemblyInfo.cs
+D:\Visual Studio\Source\IDCard\IDCard\IDCard\obj\Debug\netstandard2.0\IDCard.dll
+D:\Visual Studio\Source\IDCard\IDCard\IDCard\obj\Debug\netstandard2.0\IDCard.pdb
+D:\Visual Studio\Source\IDCard\IDCard\IDCard\obj\Debug\netstandard2.0\IDCard.csprojAssemblyReference.cache
+D:\Visual Studio\Source\IDCard\IDCard\IDCard\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Visual Studio\Source\IDCard\IDCard\IDCard\bin\Debug\netstandard2.0\Mono.Android.dll
+D:\Visual Studio\Source\IDCard\IDCard\IDCard\bin\Debug\netstandard2.0\Mono.Android.pdb
+D:\Visual Studio\Source\IDCard\IDCard\IDCard\bin\Debug\netstandard2.0\Mono.Android.xml
+D:\Visual Studio\Source\IDCard\IDCard\IDCard\obj\Debug\netstandard2.0\IDCard.csproj.CopyComplete

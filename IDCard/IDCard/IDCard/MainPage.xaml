@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:IDCard"
+             x:Class="IDCard.MainPage">
+
+     <StackLayout>
+          <Grid VerticalOptions="FillAndExpand">
+               <Grid.RowDefinitions>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+               </Grid.RowDefinitions>
+               <Image x:Name="imgPhoto" Grid.Row="0"></Image>
+               <Grid VerticalOptions="FillAndExpand" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                         <ColumnDefinition Width="2*"></ColumnDefinition>
+                         <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Entry x:Name="entIP" Text="IP" Grid.Column="0" Focused="EntIP_Focused" Unfocused="EntIP_Unfocused"></Entry>
+                    <Entry x:Name="entPort" Text="Port" Grid.Column="1" Focused="EntPort_Focused" Unfocused="EntPort_Unfocused"></Entry>
+               </Grid>
+               <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                         <ColumnDefinition/>
+                         <ColumnDefinition/>
+                         <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="btnCamera" Grid.Column="0" Text="Capture" HorizontalOptions="Center" Clicked="BtnCamera_Clicked"/>
+                    <Button x:Name="btnServer" Grid.Column="1" Text="Server" HorizontalOptions="Center" Clicked="BtnSetServer_Clicked"/>
+                    <Button x:Name="btnSave" Grid.Column="2" Text="Send" HorizontalOptions="Center" Clicked="BtnSave_Clicked"/>
+               </Grid>
+               
+               
+          </Grid>
+    </StackLayout>
+
+</ContentPage>

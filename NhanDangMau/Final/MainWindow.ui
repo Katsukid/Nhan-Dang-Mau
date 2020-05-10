@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1341</width>
+    <height>894</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="mainTab">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tabID">
+       <attribute name="title">
+        <string>ID Card</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="title">
+           <string>Extracted Data</string>
+          </property>
+          <widget class="QPushButton" name="btnSelect_IDCard">
+           <property name="geometry">
+            <rect>
+             <x>540</x>
+             <y>420</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Select Photos</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btnOpen_IDCard">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>30</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Open Folder</string>
+           </property>
+          </widget>
+          <widget class="QTreeView" name="treev_IDCard">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>420</y>
+             <width>521</width>
+             <height>281</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QGraphicsView" name="grapvRaw_IDCard">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>70</y>
+             <width>621</width>
+             <height>341</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="title">
+           <string>Extracted Data</string>
+          </property>
+          <widget class="QPushButton" name="btnExtract_IDCard">
+           <property name="geometry">
+            <rect>
+             <x>520</x>
+             <y>300</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Extract</string>
+           </property>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_7">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>450</y>
+             <width>621</width>
+             <height>261</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string>Content</string>
+           </property>
+           <widget class="QLabel" name="label_8">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>30</y>
+              <width>141</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Số CMND:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_9">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>70</y>
+              <width>141</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Họ và tên:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_10">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>110</y>
+              <width>141</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Ngày, tháng, năm sinh:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_11">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>150</y>
+              <width>141</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Giới tính:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_13">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>190</y>
+              <width>141</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Nguyên quán:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_14">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>230</y>
+              <width>141</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Nơi thường trú:</string>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="txtbNumber_IDCard">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>20</y>
+              <width>451</width>
+              <height>31</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="txtbName_IDCard">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>60</y>
+              <width>451</width>
+              <height>31</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="txtbDOB_IDCard">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>100</y>
+              <width>451</width>
+              <height>31</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="txtbSex_IDCard">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>140</y>
+              <width>451</width>
+              <height>31</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="txtbHomeTown_IDCard">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>180</y>
+              <width>451</width>
+              <height>31</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="txtHome_IDCard">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>220</y>
+              <width>451</width>
+              <height>31</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QGraphicsView" name="grapv_IDCard">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>20</y>
+             <width>621</width>
+             <height>271</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_12">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>340</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Ảnh thẻ:</string>
+           </property>
+          </widget>
+          <widget class="QGraphicsView" name="grapvFace_IDCard">
+           <property name="geometry">
+            <rect>
+             <x>170</x>
+             <y>300</y>
+             <width>141</width>
+             <height>151</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabCI">
+       <attribute name="title">
+        <string>CI Card</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="title">
+           <string>Load Photo</string>
+          </property>
+          <widget class="QPushButton" name="btnSelect_CICard">
+           <property name="geometry">
+            <rect>
+             <x>540</x>
+             <y>420</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Select Photos</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btnOpen_CICard">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>30</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Open Folder</string>
+           </property>
+          </widget>
+          <widget class="QTreeView" name="treeView_4">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>420</y>
+             <width>521</width>
+             <height>341</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QGraphicsView" name="grapvRaw_CICard">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>70</y>
+             <width>621</width>
+             <height>341</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+           <string>Extracted Data</string>
+          </property>
+          <widget class="QGroupBox" name="groupBox_5">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>460</y>
+             <width>621</width>
+             <height>301</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string>Content</string>
+           </property>
+           <widget class="QLabel" name="label">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>30</y>
+              <width>141</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Số Thẻ căn cước:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_2">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>70</y>
+              <width>141</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Họ và tên:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_3">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>110</y>
+              <width>141</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Ngày, tháng, năm sinh:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_4">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>150</y>
+              <width>141</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Giới tính:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_5">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>190</y>
+              <width>141</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Quốc tịch</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_6">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>230</y>
+              <width>141</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Quê quán:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_7">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>270</y>
+              <width>141</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Nơi thường trú:</string>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="txtbNumber_CICard">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>20</y>
+              <width>451</width>
+              <height>31</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="txtbName_CICard">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>60</y>
+              <width>451</width>
+              <height>31</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="txtbDOB_CICard">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>100</y>
+              <width>451</width>
+              <height>31</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="txtbSex_CICard">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>140</y>
+              <width>451</width>
+              <height>31</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="txtbNation_CICard">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>180</y>
+              <width>451</width>
+              <height>31</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="txtbHomeTown_CICard">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>220</y>
+              <width>451</width>
+              <height>31</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="txtbHome__CICard">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>260</y>
+              <width>451</width>
+              <height>31</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QPushButton" name="btnExtract_CICard">
+           <property name="geometry">
+            <rect>
+             <x>540</x>
+             <y>310</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Extract</string>
+           </property>
+          </widget>
+          <widget class="QGraphicsView" name="grapv_CICard">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>20</y>
+             <width>621</width>
+             <height>281</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QGraphicsView" name="grapvFace_CICard">
+           <property name="geometry">
+            <rect>
+             <x>170</x>
+             <y>310</y>
+             <width>141</width>
+             <height>151</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_15">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>370</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Ảnh thẻ:</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1341</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen_Folder">
+   <property name="text">
+    <string>Open Folder</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
