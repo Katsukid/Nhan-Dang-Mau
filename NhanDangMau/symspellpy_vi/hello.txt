@@ -1,0 +1,78 @@
+
+0
+Đầu vào: Hoa Thám
+La Phù, Hoài Đức, Hà Nôi
+Đầu ra: La Phù, Hoài Đức, Hà Nội
+1
+Đầu vào: Chanlhl_qC'tIu"fiĩ'Tiẵắqg Thủy
+Vĩnh Bảo, Hải Phòng
+Đầu ra: Không so khớp được xã/phường Vĩnh Bảo,Hải Phòng
+2
+Đầu vào: Long Hưnề, Văn Giang
+Hưng Yên
+Đầu ra: Long Hưng, Văn Giang, Hưng Yên
+3
+Đầu vào: Quang Khải, Tứ Kỳ
+Hải Dương
+Đầu ra: Quang Khải, Tứ Kỳ, Hải Dương
+4
+Đầu vào: Văn Tố, Tứ Kỳ, Hă Dương
+Đầu ra: Văn Tố, Tứ Kỳ, Hải Dương
+5
+Đầu vào: Lập Trí, Minh Trí, Sóc Sơn
+= ” HàNội.. . ˆ
+Đầu ra: Không so khớp được tỉnh/thành phố
+6
+Đầu vào: H / 04PM Ý Ý VHỈ, [WCOHEHI 7H
+Yên Nhân. Ý Yên, Nam Định
+Đầu ra: Không so khớp được quận/huyện
+7
+Đầu vào: 59 Tổ 15 Cụm 14
+n Phúc Thượng, Cống Vị, Ba Đình, Hà Nội
+Đầu ra: Cống Vị, Ba Đình, Hà Nội
+8
+Đầu vào: Thái Hòa, Hòa Mạc, Duy Tiền
+W Haả Nam
+Đầu ra: Hòa Mạc, Duy Tiên, Hà Nam
+9
+Đầu vào: Số 1131 Ngô Gia Tự Tổ 1
+Đức Giang, Long Biên, Hà Nôi
+Đầu ra: Đức Giang, Long Biên, Hà Nội
+10
+Đầu vào: Thái Hòa, Hòa Mạc, Duy Tiên
+Hà Nam
+Đầu ra: Hòa Mạc, Duy Tiên, Hà Nam
+11
+Đầu vào: Thái Hòa, Hòa Mạc, Duy Tiên
+Hà Nam
+Đầu ra: Hòa Mạc, Duy Tiên, Hà Nam
+12
+Đầu vào: Thái Hòa, Hòa Mạc, Duy Tiên
+Hà Nam
+Đầu ra: Hòa Mạc, Duy Tiên, Hà Nam
+13
+Đầu vào: Tiền Ngoại, (
+Hà Nan
+Đầu ra: Tiên Hải, Phủ Lý, Hà Nam
+14
+Đầu vào: Tổ 3, Khương Mai
+Thanh Xuân, Hà Nội
+Đầu ra: Khương Mai, Thanh Xuân, Hà Nội
+15
+Đầu vào: Nhật Tựu, Kim Bảng, Hà Nam
+Đầu ra: Nhật Tựu, Kim Bảng, Hà Nam
+16
+Đầu vào: Mạc, Duy Tiên, Hà Nam
+Đầu ra: Hòa Mạc, Duy Tiên, Hà Nam
+17
+Đầu vào: T dân phô 8, Mộ Lao
+Hà Đông, Hà Nội
+Đầu ra: Mỗ Lao, Hà Đông, Hà Nội
+18
+Đầu vào: Vũ ế Q U UU
+Hòa Mạc, Duy Tiên, Hà Nam
+Đầu ra: Hòa Mạc, Duy Tiên, Hà Nam
+19
+Đầu vào: Thọ Cường, Triệu Sơn
+Thnhr6a. -
+Đầu ra: Không so khớp được tỉnh/thành phố
