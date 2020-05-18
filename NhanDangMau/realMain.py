@@ -10,8 +10,19 @@ from detector import detector
 from cropper.cropper import crop_card
 from detector.detector import detect_info
 import cv2 as cv
-from vi_symspellpy import fixAddress
-
+from symspellpy_vi import fixAddress
+import re
+def remove_symbol(text):
+    return re.sub(r'[^\w,]', ' ', text).replace('ˆ',' ').strip().replace('  ',' ')
+def correct_space(text):
+    list_missing = [0]
+    for index, letter in enumerate(text): # Ký tự in hoa đầu tiên không phải đứng vị trí thứ 1
+        condition = letter.isupper() or letter.isdigit()
+        if index > 1 and condition and text[index-1] != ' ':
+            list_missing.append(index)
+    parts = [text[i:j] + ' ' for i,j in zip(list_missing, list_missing[1:]+[None])]
+    temp = ''.join(parts)
+    return remove_symbol(temp)
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
@@ -93,11 +104,22 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         number_text = reader.get_id_numbers_text(number_img)
         name_text = reader.get_name_text(name_img)
+        name_text = re.sub(r'[\d]', ' ', re.sub(r'[^\w]', ' ', name_text).replace('ˆ',' ').strip().replace('  ',' '))
         dob_text = reader.get_dob_text(dob_img)
         gender_text = reader.get_gender_text(gender_img)
         nation_text = reader.get_nation_text(nation_img)
         country_text = reader.process_list_img(country_img_list, is_country=True).replace('\n', ',')
+        country_text = correct_space(country_text)
+        print(country_text)
+        temp_conntry = fixAddress.find_address(country_text)
+        if (temp_conntry.find(' so ') == -1):
+            country_text = temp_conntry
         address_text = reader.process_list_img(address_img_list, is_country=False).replace('\n', ',')
+        print(address_text)
+        address_text = correct_space(address_text)
+        temp_address = fixAddress.find_address(address_text)
+        if (temp_address.find(' so ') == -1):
+            address_text = temp_address
         self.txtbNumber_CICard.document().setPlainText(number_text)
         self.txtbName_CICard.document().setPlainText(name_text)
         self.txtbDOB_CICard.document().setPlainText(dob_text)

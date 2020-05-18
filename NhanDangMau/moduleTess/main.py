@@ -61,6 +61,7 @@ list_image = [face, number_img, name_img, dob_img,
 # plt.show()
 
 number_text = reader.get_id_numbers_text(number_img)
+# plot_img(cv2.cvtColor(cv2.threshold(cv2.cvtColor(name_img,cv2.COLOR_BGR2GRAY), 90, 255, cv2.THRESH_TRUNC)[1],cv2.COLOR_GRAY2BGR))
 name_text = reader.get_name_text(name_img)
 dob_text = reader.get_dob_text(dob_img)
 gender_text = reader.get_gender_text(gender_img)

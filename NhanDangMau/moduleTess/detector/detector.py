@@ -255,7 +255,7 @@ def detect_info(img):
     name_box = info_list[0]
     name_box = get_name(img, get_main_text(img, name_box, 5))
     name_img = get_img_from_box(orig, ratio, name_box, padding=2)    
-    plot_img(name_img)
+    # plot_img(name_img)
     tmpls = list(name_box)
     tmpls[1] = int(tmpls[1] * 0.9) # Keo len 1 chut de tranh mat dau
     tmpls[3] = int(tmpls[3] * 1.1) # Keo xuong 1 chut de tranh mat dau
@@ -263,7 +263,7 @@ def detect_info(img):
     tmpls[2] = int(tmpls[2] * 1.01) # Keo xuong 1 chut de tranh mat dau
     name_box = tuple(tmpls)
     name_img = get_img_from_box(orig, ratio, name_box, padding=2)    
-    plot_img(name_img)
+    # plot_img(name_img)
     # name_img = cut_blank_part(name_img)
     # get dob part
     dob_box = info_list[1]
@@ -313,13 +313,13 @@ def detect_info(img):
     last_y = get_last_y(country_result)
     address_img = process_result(
         orig, ratio, get_two_lines_img(img, (x+40, last_y, x1, y1)))[0]
-    plot_img(address_img)
+    # plot_img(address_img)
     result = get_text_from_two_lines(img, (x+40, last_y, x1, y1))
     address_img_list = process_result(orig, ratio, result)
-    for y in range(len(address_img_list)):
-        plt.subplot(len(address_img_list), 1, y+1)
-        plt.imshow(address_img_list[y])
-    plt.show()
+    # for y in range(len(address_img_list)):
+    #     plt.subplot(len(address_img_list), 1, y+1)
+    #     plt.imshow(address_img_list[y])
+    # plt.show()
     return face, number_img, name_img, dob_img, gender_img, nation_img, country_img, \
         address_img, country_img_list, address_img_list
 #(x, y, width, height)

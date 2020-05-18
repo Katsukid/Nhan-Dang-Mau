@@ -31,7 +31,8 @@ def get_text(img):
     filename = 'temp.png'
     config = '--psm 7'
     lang = 'vie'
-    cv2.imwrite(filename, img)
+    img2 = cv2.threshold(cv2.cvtColor(img,cv2.COLOR_BGR2GRAY), 80, 255, cv2.THRESH_TRUNC)[1]
+    cv2.imwrite(filename, img2)
     text = pytesseract.image_to_string(Image.open(
         filename), lang=lang, config=config)
     print(text)
@@ -40,12 +41,6 @@ def get_text(img):
     #                      "-o", "11", "-t", "5", "temp.png", "temp.png"])
     #     text = pytesseract.image_to_string(Image.open(
     #         filename), lang=lang, config=config)
-    temp = text.split(':')
-    if temp.__len__() >= 2:
-        text = temp[1]
-    else:
-        text = temp[0]
-    print(text)
     return text
 
 
@@ -81,11 +76,13 @@ def get_dob_text(img):
 
 
 def get_gender_text(img):
-    text = get_text(img)
+    text = get_text(img).replace('Ñ','N')
     capital_n_index = text.find('N')
-    if capital_n_index != -1:
+    if text.__len__() <= 2:
+        return 'Nữ'
+    elif capital_n_index != -1:
         gender_text = text[capital_n_index:]
-        a_character = ['a', 'A', 'ă', 'â']
+        a_character = ['a', 'A', 'ă', 'â','ã']
         if (gender_text[1] and gender_text[1] in a_character) or gender_text[-1] == 'm':
             gender_text = 'Nam'
             return gender_text
@@ -95,18 +92,18 @@ def get_gender_text(img):
 
 def get_nation_text(img):
     text = get_text(img)
-    # colon_index = text.find(':')
-    # if colon_index != -1 and colon_index < len(text)/2:
-    #     text = text[colon_index+1:]
-    # else:
-    #     words = text.split()
-    #     for index, word in enumerate(words):
-    #         if index != 0 and word[0].isupper():
-    #             text = words[index:]
-    #             break
-    #     text = ' '.join(text)
-    # text = text.strip('. :')
-    return text
+    colon_index = text.find(':')
+    if colon_index != -1 and colon_index < len(text)/2:
+        text = text[colon_index+1:]
+    else:
+        words = text.split()
+        for index, word in enumerate(words):
+            if index != 0 and word[0].isupper():
+                text = words[index:]
+                break
+        text = ' '.join(text)
+    text = text.strip('. :')
+    return 'Việt Nam'
 
 
 def get_id_numbers_text(img):
@@ -150,11 +147,9 @@ def strip_label_and_get_text(img, is_country, config='--psm 7'):
             if is_country:
                 condition = letter.isupper()
             else:
-                condition = letter.isupper() or letter.isdigit()
+                condition = (letter.isupper() or letter.isdigit())
             if index > 1 and condition:
                 text = text[index:]
-                # print(text)
-                # print(letter)
                 break
     return text
 
@@ -223,4 +218,12 @@ def fix_last_name(name):
 
 def get_name_text(img):
     name = get_text(img)
+    name = remove_conton(name)
     return fix_last_name(name)
+def remove_conton(text):
+    temp = text.split(':')
+    if temp.__len__() >= 2:
+        text = temp[1]
+    else:
+        text = temp[0]
+    return text

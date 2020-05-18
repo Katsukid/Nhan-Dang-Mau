@@ -62,7 +62,7 @@ def get_img_from_box(orig, ratio, box, padding=0):
 
 
 def four_point_transform(image, rect):
-    print(rect)
+    # print(rect)
     (tl, tr, bl, br) = rect
     widthA = np.sqrt(((br[0] - bl[0]) ** 2) + ((br[1] - bl[1]) ** 2))
     widthB = np.sqrt(((tr[0] - tl[0]) ** 2) + ((tr[1] - tl[1]) ** 2))

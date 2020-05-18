@@ -31,15 +31,18 @@ def get_text(img):
     filename = 'temp.png'
     config = '--psm 7'
     lang = 'vie'
-    cv2.imwrite(filename, img)
+    img2 = cv2.threshold(cv2.cvtColor(img,cv2.COLOR_BGR2GRAY), 90, 255, cv2.THRESH_TRUNC)[1]
+    cv2.imwrite(filename, img2)
     text = pytesseract.image_to_string(Image.open(
         filename), lang=lang, config=config)
+    if not text:
+        # subprocess.call(["./resources/textcleaner", "-g", "-e", "normalize",
+        #                  "-o", "11", "-t", "5", "temp.png", "temp.png"])
+        # img2 = cv2.threshold(cv2.cvtColor(img,cv2.COLOR_BGR2GRAY), 90, 255, cv2.THRESH_TRUNC)[1]
+        # cv2.imwrite(filename, img2)
+        text = pytesseract.image_to_string(Image.open(
+            filename), lang=lang, config=config)
     print(text)
-    # if not text:
-    #     subprocess.call(["./resources/textcleaner", "-g", "-e", "normalize",
-    #                      "-o", "11", "-t", "5", "temp.png", "temp.png"])
-    #     text = pytesseract.image_to_string(Image.open(
-    #         filename), lang=lang, config=config)
     text = text.strip('. :')
     return text
 

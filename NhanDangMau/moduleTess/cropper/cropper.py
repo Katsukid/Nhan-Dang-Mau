@@ -160,6 +160,8 @@ def crop_card(image_path):
         return None
     list_conner.sort(key=lambda t: t[-1])
     # print(list_conner)
+    # for i in list_conner:
+    #     print(i[-1])
     list_conner_locations = [conner[0] for conner in list_conner]
     # print(list_conner_locations)
     pts = np.array(list_conner_locations, dtype="float32")
