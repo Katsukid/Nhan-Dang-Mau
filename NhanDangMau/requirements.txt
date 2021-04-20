@@ -38,7 +38,7 @@ Pillow==7.0.0
 pip==20.0.2
 pluggy==0.13.1
 protobuf==3.11.3
-py==1.8.1
+py==1.10.0
 pyparsing==2.4.6
 PyQt5==5.14.2
 PyQt5-sip==12.7.2
